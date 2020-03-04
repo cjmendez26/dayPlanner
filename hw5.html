@@ -10,293 +10,164 @@
     <link rel="stylesheet" href="hw5.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script type="text/javascript" src="hw5.js"></script>
+
     <title>Calender</title>
 
 </head>
 
-<body onLoad="renderTimer();">
+<body class="bg-dark">
     <!--main header-->
     <div class="jumbotron bg-info">
-        <h1 class="display-4">
-            <center>Planner</center>
+        <h1 class="display-4 text-center">
+            Planner
         </h1>
-        <p class="lead">
-            <center>Hourly Workday Planner</center>
+        <p class="lead text-center">
+            Hourly Workday Planner
         </p>
         <hr class="my-4">
         <!--the time/date should be displayed here-->
-        <div id="clockDisplay" class="container"></div>
+        <div class="container" >
+            <p class="text-center" id="clockDisplay"></p>
+        </div>
     </div>
     <!--the sots for inputting info and button for saving info -->
+    <!-- div for 9am-5pm time buttons with save button that changes color-->
     <div class="container">
         <div class="row">
-            <div class="col-sm">
-            </div>
+            <div class="col-sm"></div>
             <div class="col-sm">
                 <div class="input-group mb-3">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">7 AM
-                        </button>
+                        <button class="outline-secondary">9 AM</button>
                     </div>
-                    <input type="text" class="form-control" placeholder="open" aria-label="Recipient's username"
+                    <input type="text" class="form-control" placeholder="Open" aria-label="Open Assingment"
                         aria-describedby="button-addon2">
-                    <button class="btn bg-danger btn-outline-secondary" type="button" id="button-addon2">Save
-                    </button>
+                    <button class="btn bg-warning btn-outline-secondary save" type="button" id="900">Save</button>
                 </div>
             </div>
-            <div class="col-sm">
-            </div>
+            <div class="col-sm"></div>
         </div>
-    </div>
-
-    <div class="container">
+        <!-- start of 10am -->
         <div class="row">
-            <div class="col-sm">
-            </div>
+            <div class="col-sm"></div>
             <div class="col-sm">
                 <div class="input-group mb-3">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">8 AM
-                        </button>
+                        <button class="outline-secondary">10 AM</button>
                     </div>
-                    <input type="text" class="form-control" placeholder="Open" aria-label="Recipient's username"
+                    <input type="text" class="form-control" placeholder="Open" aria-label="Open Assingment"
                         aria-describedby="button-addon2">
-                <button class="btn bg-danger btn-outline-secondary" type="button" id="button-addon2">Save
-                </button>
+                    <button class="btn bg-warning btn-outline-secondary save" type="button" id="1000">Save</button>
+                </div>
             </div>
+            <div class="col-sm"></div>
         </div>
-            <div class="col-sm">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container">
+        <!-- start of 11am -->
         <div class="row">
-            <div class="col-sm">
-            </div>
-            <div class="col-sm">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">9 AM
-                        </button>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Open"
-                        aria-label="Example text with button addon" aria-describedby="button-addon1">
-                
-                <button class="btn bg-danger btn-outline-secondary" type="button" id="button-addon2">Save
-                </button>
-            </div>
-        </div>
-            <div class="col-sm">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-            </div>
+            <div class="col-sm"></div>
             <div class="col-sm">
                 <div class="input-group mb-3">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">10 AM
-                        </button>
+                        <button class="outline-secondary">11 AM</button>
                     </div>
-                    <input type="text" class="form-control" placeholder="Open" aria-label="Recipient's username"
+                    <input type="text" class="form-control" placeholder="Open" aria-label="Open Assingment"
                         aria-describedby="button-addon2">
-                
-                <button class="btn bg-danger btn-outline-secondary" type="button" id="button-addon2">Save
-                </button>
-            </div>
-        </div>
-            <div class="col-sm">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-            </div>
-            <div class="col-sm">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">11 AM
-                        </button>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Open"
-                        aria-label="Example text with button addon" aria-describedby="button-addon1">
+                    <button class="btn bg-warning btn-outline-secondary save" type="button" id="1100">Save</button>
                 </div>
-                <button class="btn bg-danger btn-outline-secondary" type="button" id="button-addon2">Save
-                </button>
             </div>
-            <div class="col-sm">
-            </div>
+            <div class="col-sm"></div>
         </div>
-    </div>
-
-
-    <div class="container">
+        <!-- start of 12pm -->
         <div class="row">
-            <div class="col-sm">
-            </div>
+            <div class="col-sm"></div>
             <div class="col-sm">
                 <div class="input-group mb-3">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">12 PM
-                        </button>
+                        <button class="outline-secondary">12 PM</button>
                     </div>
-                    <input type="text" class="form-control" placeholder="Open" aria-label="Recipient's username"
+                    <input type="text" class="form-control" placeholder="Open" aria-label="Open Assingment"
                         aria-describedby="button-addon2">
+                    <button class="btn bg-warning btn-outline-secondary save" type="button" id="1200">Save</button>
                 </div>
-                <button class="btn bg-danger btn-outline-secondary" type="button" id="button-addon2">Save
-                </button>
             </div>
-            <div class="col-sm">
-            </div>
+            <div class="col-sm"></div>
         </div>
-    </div>
-
-
-    <div class="container">
+        <!-- start of 1pm -->
         <div class="row">
-            <div class="col-sm">
-            </div>
-            <div class="col-sm">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">1 PM
-                        </button>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Open"
-                        aria-label="Example text with button addon" aria-describedby="button-addon1">
-                </div>
-                <button class="btn bg-danger btn-outline-secondary" type="button" id="button-addon2">Save
-                </button>
-            </div>
-            <div class="col-sm">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-            </div>
+            <div class="col-sm"></div>
             <div class="col-sm">
                 <div class="input-group mb-3">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">2 PM
-                        </button>
+                        <button class="outline-secondary">1 PM</button>
                     </div>
-                    <input type="text" class="form-control" placeholder="Open" aria-label="Recipient's username"
+                    <input type="text" class="form-control" placeholder="Open" aria-label="Open Assingment"
                         aria-describedby="button-addon2">
+                    <button class="btn bg-warning btn-outline-secondary save" type="button" id="1300">Save</button>
                 </div>
-                <button class="btn bg-danger btn-outline-secondary" type="button" id="button-addon2">Save
-                </button>
             </div>
-            <div class="col-sm">
-            </div>
+            <div class="col-sm"></div>
         </div>
-    </div>
-
-
-    <div class="container">
+        <!-- start of 2PM -->
         <div class="row">
-            <div class="col-sm">
-            </div>
-            <div class="col-sm">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">3 PM
-                        </button>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Open"
-                        aria-label="Example text with button addon" aria-describedby="button-addon1">
-                </div>
-                <button class="btn bg-danger btn-outline-secondary" type="button" id="button-addon2">Save
-                </button>
-            </div>
-            <div class="col-sm">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-            </div>
+            <div class="col-sm"></div>
             <div class="col-sm">
                 <div class="input-group mb-3">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">4 PM
-                        </button>
+                        <button class="outline-secondary">2 PM</button>
                     </div>
-                    <input type="text" class="form-control" placeholder="Open" aria-label="Recipient's username"
+                    <input type="text" class="form-control" placeholder="Open" aria-label="Open Assingment"
                         aria-describedby="button-addon2">
+                    <button class="btn bg-warning btn-outline-secondary save" type="button" id="1400">Save</button>
                 </div>
-                <button class="btn bg-danger btn-outline-secondary" type="button" id="button-addon2">Save
-                </button>
             </div>
-            <div class="col-sm">
-            </div>
+            <div class="col-sm"></div>
         </div>
-    </div>
-
-
-    <div class="container">
+        <!-- start of 3 PM -->
         <div class="row">
-            <div class="col-sm">
-            </div>
-            <div class="col-sm">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">5 PM
-                        </button>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Open"
-                        aria-label="Example text with button addon" aria-describedby="button-addon1">
-                </div>
-                <button class="btn bg-danger btn-outline-secondary" type="button" id="button-addon2">Save
-                </button>
-            </div>
-            <div class="col-sm">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-            </div>
+            <div class="col-sm"></div>
             <div class="col-sm">
                 <div class="input-group mb-3">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon1">6 PM
-                        </button>
+                        <button class="outline-secondary">3 PM</button>
                     </div>
-                    <input type="text" class="form-control" placeholder="Open" aria-label="Recipient's username"
+                    <input type="text" class="form-control" placeholder="Open" aria-label="Open Assingment"
                         aria-describedby="button-addon2">
+                    <button class="btn bg-warning btn-outline-secondary save" type="button" id="1500">Save</button>
                 </div>
-                <button class="btn bg-danger btn-outline-secondary" type="button" id="button-addon2">Save
-                </button>
             </div>
+            <div class="col-sm"></div>
+        </div>
+        <!-- start of 4 PM -->
+        <div class="row">
+            <div class="col-sm"></div>
             <div class="col-sm">
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <button class="outline-secondary">4 PM</button>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Open" aria-label="Open Assingment"
+                        aria-describedby="button-addon2">
+                    <button class="btn bg-warning btn-outline-secondary save" type="button" id="1600">Save</button>
+                </div>
             </div>
+            <div class="col-sm"></div>
+        </div>
+        <!-- start of 5 PM -->
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <div class="input-group mb-3">
+                    <div class="input-group-append">
+                        <button class="outline-secondary">5 PM</button>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Open" aria-label="Open Assingment"
+                        aria-describedby="button-addon2">
+                    <button class="btn bg-warning btn-outline-secondary save" type="button" id="1700">Save</button>
+                </div>
+            </div>
+            <div class="col-sm"></div>
         </div>
     </div>
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -306,6 +177,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="hw5.js"></script>
 </body>
 
 </html>

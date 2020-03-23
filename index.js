@@ -1,16 +1,18 @@
 function renderTimer() {
-    $("#clockDisplay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
+    $('#clockDisplay').text(moment().format('dddd MMMM Do YYYY, h:mm a'));
 }
 renderTimer();
 
 // function colorMorph() {
 //     var hour = moment().startOf('day').fromNow();
 //     var currentHour = parseInt(hour.split(" ")[0]);
-//  $(".save").each(function(){
+//  $('.save').each(function(){
     
-//     var buttonHour = $(this).attr("id") / 100;
+//     var buttonHour = $(this).attr('id') / 100;
 
-//     console.log(typeof currentHour, typeof buttonHour)
+//     console.log(typeof currentHour, typeof buttonHour);
+// }
+// colorMorph();
 //   if (currentHour === buttonHour ) {
 //       $(this).removeClass().addClass("btn bg-danger btn-outline-secondary save");
 // // } else if (currentHour <= buttonHour) {
@@ -21,6 +23,3 @@ renderTimer();
 //     //  $(this).removeClass().addClass("btn bg-warning btn-outline-secondary save");
 // //  })
 // }
-
-// colorMorph();
-
